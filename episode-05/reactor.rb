@@ -68,7 +68,8 @@ class Reactor
 
   def heat_items_in_core
     @core.contents.each do |item|
-      datas_cat_eats_dilithium_crystals
+      # SOLUTION COMENTED THE LINE BELOW
+      # datas_cat_eats_dilithium_crystals
       item.temperature += 1 if draw_power
     end
   end

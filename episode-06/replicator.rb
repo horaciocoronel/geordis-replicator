@@ -1,3 +1,4 @@
+require 'pry'
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -53,7 +54,6 @@ class Replicator
 
     # Setup an instance variable to access the glass.
     @glass = @inside_replicator.contents.first
-
     # Transport each ingredient the recipe calls for
     # from the pantry to the glass.
     # If this method is successful, it should return
@@ -84,6 +84,8 @@ class Replicator
     # and now @plate.contents should contain the glass at
     # the proper temperature and with the proper ingredients.
     transport_glass_to_replicator_plate
+    # binding.pry
+
   end
 
   # This moves the glass from the cupboard to inside the replicator.
@@ -96,6 +98,7 @@ class Replicator
   end
 
   def glass_inside_replicator
+    # binding.pry
     # This reaches into the @inside_replicator location instance
     # and then into the `contents` of that instance, which is an array
     # and obtains the first element of that array.

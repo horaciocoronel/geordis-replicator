@@ -1,3 +1,4 @@
+require 'pry'
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -23,6 +24,7 @@ class Replicator
   # This sets up an accessor to the replicator plate, so that in the main
   # geordis-replicator.rb program, we can see what's on the replicator plate (if anything)
   def plate
+    # binding.pry
     @plate
   end
 
@@ -40,11 +42,11 @@ class Replicator
   # and then manually execute each method to ensure
   # it returns what's expect.
   def replicate(recipe)
-
+    # binding.pry
     # Setup an instance variable for the recipe
     # so that other methods can see what the recipe is
     @recipe = recipe
-
+# binding.pry
     # This transports a glass from the cupboard to inside the replicator.
     # If this method is successful, it will return the glass that was
     # transported and @inside_replicator will contain the glass
@@ -53,7 +55,7 @@ class Replicator
 
     # Setup an instance variable to access the glass.
     @glass = @inside_replicator.contents.first
-
+# binding.pry
     # Transport each ingredient the recipe calls for
     # from the pantry to the glass.
     # If this method is successful, it should return
@@ -65,7 +67,7 @@ class Replicator
     # And then to see what's inside the glass, use:
     #   glass_inside_replicator.inside.contents
     transport_ingredients_to_glass
-
+# binding.pry
     # This methods mixes the ingredients in the glass around.
     # It returns nil, even if successful, but if you look at:
     #   glass_inside_replicator.inside.contents
@@ -100,6 +102,7 @@ class Replicator
     # and then into the `contents` of that instance, which is an array
     # and obtains the first element of that array.
     @inside_replicator.contents.first
+    # binding.pry
   end
 
   # This transports ingredients into the glass.
@@ -114,7 +117,7 @@ class Replicator
       @enterprise.transporter.energize(
         # Geordi is in a jokey mood and
         # reprograms the replicator
-        @enterprise.pantry.find_ingredient('banana'),
+        @enterprise.pantry.find_ingredient(ingredient_name),
         @enterprise.pantry.shelf,
         glass_inside_replicator.inside
       )
