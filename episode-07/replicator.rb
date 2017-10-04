@@ -1,3 +1,4 @@
+require 'pry'
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -146,7 +147,9 @@ class Replicator
 
     # Setup variables for temperature adjustment loop
     desired_temperature         = @recipe.temperature
-    maximum_adjustments_allowed = 5
+binding.pry
+    # SOLUTION Modified maximum_adjustments_allowed to 42
+    maximum_adjustments_allowed = 42
     number_of_adjustments       = 0
 
     # Keep adjusting temperature until desired temperature is reached
