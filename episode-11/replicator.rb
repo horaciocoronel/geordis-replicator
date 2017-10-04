@@ -1,3 +1,4 @@
+require 'pry'
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -53,7 +54,7 @@ class Replicator
 
     # Setup an instance variable to access the glass.
     @glass = @inside_replicator.contents.first
-
+# binding.pry
     # Transport each ingredient the recipe calls for
     # from the pantry to the glass.
     # If this method is successful, it should return
@@ -72,7 +73,7 @@ class Replicator
     # then you may find the ingredients order has changed.
     # If it's successful, all the ingredients should still be in the glass.
     mix
-
+# binding.pry
     # This method adjusts the temperature of the contents in the glass.
     # If you read back `glass.temperature`, then it should be set
     # to the temperature the recipe calls for if this method executed properly.
