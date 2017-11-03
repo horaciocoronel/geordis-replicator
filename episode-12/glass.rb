@@ -4,8 +4,8 @@
 # and setup a spot inside of itself to store the ingredients.
 
 class Glass
-
-  LUKE_WARM = 370
+  # SOLUTION LUKE_WARM was 370 
+  LUKE_WARM = 37
 
   def initialize
     @inside      = Location.new
