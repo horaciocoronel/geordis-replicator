@@ -12,7 +12,8 @@ class Ingredient
   end
 
   def initialize(name)
-    @name = 'cherry'
+    @name = name
+    # Found Solution - Replaced 'Cherry' with 'name' argument
   end
 
   def name

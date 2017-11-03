@@ -1,3 +1,4 @@
+require 'pry'
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -23,7 +24,7 @@ class Replicator
   # This sets up an accessor to the replicator plate, so that in the main
   # geordis-replicator.rb program, we can see what's on the replicator plate (if anything)
   def plate
-    @plate
+  @plate
   end
 
   def connect_to_power
